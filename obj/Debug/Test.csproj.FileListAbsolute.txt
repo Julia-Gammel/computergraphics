@@ -1,0 +1,9 @@
+c:\users\uzver'\documents\visual studio 2015\Projects\Test\Test\bin\Debug\Test.exe.config
+C:\Users\Uzver'\Documents\Visual Studio 2015\Projects\Test\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\Uzver'\Documents\Visual Studio 2015\Projects\Test\Test\obj\Debug\Test.Form1.resources
+C:\Users\Uzver'\Documents\Visual Studio 2015\Projects\Test\Test\obj\Debug\Test.Properties.Resources.resources
+C:\Users\Uzver'\Documents\Visual Studio 2015\Projects\Test\Test\obj\Debug\Test.csproj.GenerateResource.Cache
+C:\Users\Uzver'\Documents\Visual Studio 2015\Projects\Test\Test\bin\Debug\Test.exe
+C:\Users\Uzver'\Documents\Visual Studio 2015\Projects\Test\Test\bin\Debug\Test.pdb
+C:\Users\Uzver'\Documents\Visual Studio 2015\Projects\Test\Test\obj\Debug\Test.exe
+C:\Users\Uzver'\Documents\Visual Studio 2015\Projects\Test\Test\obj\Debug\Test.pdb
