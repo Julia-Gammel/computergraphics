@@ -145,7 +145,20 @@ namespace Test
 
         private void серпияToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Filters filter = new Sepia();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
 
+        private void яркостьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new Brightness(10);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void фильтрСобеляToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new SobelFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
         }
     }
 }

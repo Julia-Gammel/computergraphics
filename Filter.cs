@@ -24,7 +24,7 @@ namespace Test
             Bitmap resultImage = new Bitmap(sourceImage.Width, sourceImage.Height);
             for (int i = 0; i < sourceImage.Width; i++)
             {
-                worker.ReportProgress((int)(float)i / resultImage.Width * 100); //будет сигнализировать элементу BackgroundWorker о текущем прогрессе
+                worker.ReportProgress((int)((float)i / resultImage.Width * 100)); //будет сигнализировать элементу BackgroundWorker о текущем прогрессе
                 if (worker.CancellationPending)
                     return null;
                 for (int j = 0; j < sourceImage.Height; j++)
@@ -90,7 +90,7 @@ namespace Test
             kernel = new float[sizeX, sizeY];
             for (int i = 0; i < sizeX; i++)
                 for (int j = 0; j < sizeX; j++)
-                    kernel[i, j] = 1.0f / (float)(sizeX * sizeY); //ошибка тут
+                    kernel[i, j] = 1.0f / (float)(sizeX * sizeY);
         }
     }
 
@@ -136,8 +136,56 @@ namespace Test
         }
     }
 
-    class Sepia
+    class Sepia : Filters 
     {
+        protected override Color calculateNewPicelColor(Bitmap sourceImage, int x, int y)
+        {
+            Color sourceColor = sourceImage.GetPixel(x, y);
+            double Intensity = 0.36 * sourceColor.R + 0.53 * sourceColor.G + 0.11 * sourceColor.B;
+            int value = (int)Intensity;
+            float k = 20.0F;
+            Color resultColor = Color.FromArgb(//value + 2 * k, (int)(value + 0.5 * k), value - 1 * k);
+                Clamp((int)(Intensity + 2*k), 0, 255), Clamp((int)(Intensity + 0.5*k), 0, 255), Clamp((int)(Intensity - 1* k), 0, 255));
+            return resultColor;
+        }
+    }
+
+
+    class Brightness : Filters
+    {
+    private int factor;
+    public Brightness(int value)
+        {
+            factor = value;
+        } 
+    protected override Color calculateNewPicelColor(Bitmap sourceImage, int x, int y)
+        {
+            Color sourceColor = sourceImage.GetPixel(x, y);
+            //const int factor = 7;
+            Color resultColor = Color.FromArgb(Clamp((sourceColor.R + factor), 0, 255), Clamp((sourceColor.G + factor), 0, 255), Clamp((sourceColor.B + factor), 0, 255));
+            return resultColor;
+        }
+    }
+
+    class SobelFilter : MatrixFilter
+    {
+        //private int[,] SobelOY = new int[3, 3] { { 1, 2, 1 }, { 0, 0, 0 }, { -1, -2, -1 } };
+       // private int[,] SobelOX = new int[3, 3] { { -1, 0, 1 }, { -2, 0, 2 }, { -1, 0, 1 } };
+        public SobelFilter() {
+            int[,] SobelOY = new int[3, 3] { { 1, 2, 1 }, { 0, 0, 0 }, { -1, -2, -1 } };
+            //int[,] SobelOX = new int[3, 3] { { -1, 0, 1 }, { -2, 0, 2 }, { -1, 0, 1 } };
+        }
 
     }
+    /*class YCbCr : Filters
+    {
+        protected override Color calculateNewPicelColor(Bitmap sourceImage, int x, int y)
+        {
+            Color sourceColor = sourceImage.GetPixel(x, y);
+            double Intensity = 0.36 * sourceColor.R + 0.53 * sourceColor.G + 0.11 * sourceColor.B;
+            int value = (int)Intensity;
+            Color resultColor = Color.FromArgb(value, value, value);
+            return resultColor;
+        }
+    }*/
 }
