@@ -17,13 +17,3 @@ C:\Users\gammel.ju\Downloads\computergraphics-master\computergraphics-master\obj
 C:\Users\gammel.ju\Downloads\computergraphics-master\computergraphics-master\obj\Debug\Test.csproj.CoreCompileInputs.cache
 C:\Users\gammel.ju\Downloads\computergraphics-master\computergraphics-master\obj\Debug\Test.exe
 C:\Users\gammel.ju\Downloads\computergraphics-master\computergraphics-master\obj\Debug\Test.pdb
-C:\Users\gammel.ju\Downloads\computergraphics-master\bin\Debug\Test.exe.config
-C:\Users\gammel.ju\Downloads\computergraphics-master\bin\Debug\Test.exe
-C:\Users\gammel.ju\Downloads\computergraphics-master\bin\Debug\Test.pdb
-C:\Users\gammel.ju\Downloads\computergraphics-master\obj\Debug\Test.csprojAssemblyReference.cache
-C:\Users\gammel.ju\Downloads\computergraphics-master\obj\Debug\Test.Form1.resources
-C:\Users\gammel.ju\Downloads\computergraphics-master\obj\Debug\Test.Properties.Resources.resources
-C:\Users\gammel.ju\Downloads\computergraphics-master\obj\Debug\Test.csproj.GenerateResource.cache
-C:\Users\gammel.ju\Downloads\computergraphics-master\obj\Debug\Test.csproj.CoreCompileInputs.cache
-C:\Users\gammel.ju\Downloads\computergraphics-master\obj\Debug\Test.exe
-C:\Users\gammel.ju\Downloads\computergraphics-master\obj\Debug\Test.pdb

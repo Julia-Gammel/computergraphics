@@ -12,12 +12,10 @@ namespace Test
 {
     public partial class Form1 : Form
     {
-        Stack<Bitmap> LImage;
         Bitmap image;
         public Form1()
         {
             InitializeComponent();
-            LImage = new Stack<Bitmap>();
         }
 
         private void фильтрыToolStripMenuItem_Click(object sender, EventArgs e)
@@ -40,12 +38,11 @@ namespace Test
             }
             pictureBox1.Image = image;
             pictureBox1.Refresh();
-            LImage.Push((Bitmap)(pictureBox1.Image));
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) //по клику мышки работает, ха-ха-ха
         {
-            //pictureBox1.Image = image;
+            // pictureBox1.Image = image;
             //pictureBox1.Refresh();
         }
 
@@ -53,9 +50,9 @@ namespace Test
         {
             InvertFilter filter = new InvertFilter();
             backgroundWorker1.RunWorkerAsync(filter);
-            //Bitmap resultImage = filter.processImage(image);
-            //pictureBox1.Image = resultImage;
-            //pictureBox1.Refresh();
+            // Bitmap resultImage = filter.processImage(image);
+            // pictureBox1.Image = resultImage;
+            //  pictureBox1.Refresh();
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -87,7 +84,6 @@ namespace Test
                 pictureBox1.Image = image;
                 pictureBox1.Refresh();
             }
-            LImage.Push((Bitmap)(pictureBox1.Image));
             progressBar1.Value = 0;
         }
 
@@ -149,27 +145,6 @@ namespace Test
 
         private void серпияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Filters filter = new Sepia();
-            backgroundWorker1.RunWorkerAsync(filter);
-        }
-
-        private void яркостьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Filters filter = new Brightness(10);
-            backgroundWorker1.RunWorkerAsync(filter);
-        }
-
-        private void фильтрСобеляToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Filters filter = new SobelFilter();
-            backgroundWorker1.RunWorkerAsync(filter);
-        }
-
-        private void отменаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LImage.Pop();
-            pictureBox1.Image = LImage.Peek();
-            pictureBox1.Refresh();
 
         }
     }
