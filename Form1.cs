@@ -35,7 +35,6 @@ namespace Test
             }
             else
             {
-                //Console.WriteLine("Nani"); 
                 Application.Exit();
             }
             pictureBox1.Image = image;
@@ -171,6 +170,96 @@ namespace Test
             pictureBox1.Image = LImage.Peek();
             pictureBox1.Refresh();
 
+        }
+
+        private void резкостьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new Sharpness();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void фильтрСобеляToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Filters filter = new SobelFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void операторЩарраToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new PruittOperator();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void операторПрюиттаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new SharrOperator();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void вправоToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new Transfer(50);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }        
+
+        private void переместитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new Transfer(50);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Filters filter = new Rotate(45);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Filters filter = new Rotate(90);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Filters filter = new Rotate(180);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void первыйВариантToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new WavesOne();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void второйВариантToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new WavesTwo();
+            backgroundWorker1.RunWorkerAsync(filter);        
+           }
+
+        private void эффектСтеклаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new Glass();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void уменьшитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new GetSmall();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void motionBlurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new MotionBlur();
+            backgroundWorker1.RunWorkerAsync(filter);        
+        }
+
+        private void серыймирToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GrayWorld filter = new GrayWorld();
+            backgroundWorker1.RunWorkerAsync(filter);
         }
     }
 }

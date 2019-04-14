@@ -1,5 +1,4 @@
 c:\users\uzver'\documents\visual studio 2015\Projects\Test\Test\bin\Debug\Test.exe.config
-C:\Users\Uzver'\Documents\Visual Studio 2015\Projects\Test\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
 C:\Users\Uzver'\Documents\Visual Studio 2015\Projects\Test\Test\obj\Debug\Test.Form1.resources
 C:\Users\Uzver'\Documents\Visual Studio 2015\Projects\Test\Test\obj\Debug\Test.Properties.Resources.resources
 C:\Users\Uzver'\Documents\Visual Studio 2015\Projects\Test\Test\obj\Debug\Test.csproj.GenerateResource.Cache
@@ -27,3 +26,5 @@ C:\Users\gammel.ju\Downloads\computergraphics-master\obj\Debug\Test.csproj.Gener
 C:\Users\gammel.ju\Downloads\computergraphics-master\obj\Debug\Test.csproj.CoreCompileInputs.cache
 C:\Users\gammel.ju\Downloads\computergraphics-master\obj\Debug\Test.exe
 C:\Users\gammel.ju\Downloads\computergraphics-master\obj\Debug\Test.pdb
+C:\Users\Uzver'\Documents\Visual Studio 2015\Projects\Test\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\Uzver'\Documents\Visual Studio 2015\Projects\Test\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
